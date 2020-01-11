@@ -1,1 +1,1 @@
-from service.sentiment_process import sentiment_process
+from service.sentiment_process import on_status
