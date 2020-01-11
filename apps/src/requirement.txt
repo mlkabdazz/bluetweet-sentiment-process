@@ -1,5 +1,0 @@
-host        = ec2-174-129-255-76.compute-1.amazonaws.com
-database    = d6binvd45dcfp8
-user        = uuuvydfagounha
-password    = 0a09d4304d05a75ae81ed01b353d9a2c44e13c41c41a3e0c860b398a80ba25e9
-database_url= postgres://uuuvydfagounha:0a09d4304d05a75ae81ed01b353d9a2c44e13c41c41a3e0c860b398a80ba25e9@ec2-174-129-255-76.compute-1.amazonaws.com:5432/d6binvd45dcfp8
