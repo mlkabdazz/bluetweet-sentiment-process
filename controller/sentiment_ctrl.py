@@ -14,6 +14,16 @@ def sentiment_controller():
     sentiment_negative = result_sentiment[1]
     sentiment_normal = result_sentiment[2]
 
+    total_hasil_sentiment = sentiment_positve + sentiment_negative + sentiment_normal
+
+    sentiment_positve = ((sentiment_positve / total_hasil_sentiment) * 100)
+    sentiment_normal = ((sentiment_normal / total_hasil_sentiment) * 100)
+    sentiment_negative = ((sentiment_negative / total_hasil_sentiment) * 100)
+
+    print("persentase positive : ", sentiment_positve)
+    print("persentase negative : ", sentiment_negative)
+    print("persentase normal : ", sentiment_normal)
+
     sentiment_pos = sentiment('1', 'POSITIF', sentiment_positve, datetime.now())
     sentiment_neg = sentiment('2', 'NEGATIF', sentiment_negative, datetime.now())
     sentiment_nor = sentiment('3', 'NORMAL', sentiment_normal, datetime.now())

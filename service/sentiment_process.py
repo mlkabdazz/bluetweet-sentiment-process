@@ -20,8 +20,9 @@ def on_status():
         polarity = sentiment
         # subjectivity = sentiment.subjectivity/
 
+        print("Running sentiment process...")
+
         if (polarity is not 'x'):
-            print("hahaha")
             if (polarity < 0):
                 # print('Negative : ', polarity)
                 sentiment_negative += 1
