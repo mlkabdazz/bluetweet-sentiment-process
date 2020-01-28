@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from controller import sentiment_blueprint, account_tweet_ctrl
+from pyspark.sql import SparkSession
 
 
 app = Flask(__name__)
@@ -9,6 +10,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://uuuvydfagounha:0a09d4304d05a
 app.config['SECRET_KEY'] = '0a09d4304d05a75ae81ed01b353d9a2c44e13c41c41a3e0c860b398a80ba25e9'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:postgres@localhost:5432/bluetweets_dev'
 # app.config['SECRET_KEY'] = 'postgres'
+
+spark = SparkSession.Builder.appName("try-to-run-spark").getOrCreate()
+spark.sparkContext.setLogLevel("ERROR")
 
 db = SQLAlchemy(app)
 
