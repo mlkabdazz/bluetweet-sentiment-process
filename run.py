@@ -16,10 +16,6 @@ spark.sparkContext.setLogLevel("ERROR")
 
 db = SQLAlchemy(app)
 
-app.register_blueprint(sentiment_blueprint)
-app.register_blueprint(account_tweet_ctrl)
-
-
 @app.route("/")
 def home():
     return "this your home"
